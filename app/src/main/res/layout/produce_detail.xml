@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="produceViewModel"
+            type="com.gilboot.agriculturemarket.produce.ProduceViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{produceViewModel.currentProduceLiveData.name}"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/size_normal"
+            tools:text="Ssenyonjo Gilbert" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{produceViewModel.currentProduceLiveData.name}"
+            android:textColor="@color/primaryTextColor"
+            tools:text="3999.3" />
+    </LinearLayout>
+</layout>

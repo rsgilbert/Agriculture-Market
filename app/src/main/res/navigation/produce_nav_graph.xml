@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/produce_nav_graph"
+    app:startDestination="@id/produceListFragment">
+
+    <fragment
+        android:id="@+id/produceListFragment"
+        android:name="com.gilboot.agriculturemarket.produce.ProduceListFragment"
+        android:label="ProduceListFragment">
+        <action
+            android:id="@+id/action_produceListFragment_to_produceDetailFragment"
+            app:destination="@id/produceDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/produceDetailFragment"
+        android:name="com.gilboot.agriculturemarket.produce.ProduceDetailFragment"
+        android:label="ProduceDetailFragment" />
+</navigation>

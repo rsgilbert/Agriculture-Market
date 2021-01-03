@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColorDark">#D32F2F</color>
+    <color name="primaryColor">#F44336</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="tab_selected_color">#C7CCEA</color>
+    <color name="primaryColorLight">#FFCDD2</color>
+    <color name="primaryColorText">#FFFFFF</color>
+    <color name="primaryTextColor">#212121</color>
+    <color name="secondaryTextColor">#757575</color>
+    <color name="dividerColor">#BDBDBD</color>
+    <color name="withdrawColor">#009688</color>
+    <color name="depositColor">#F44336</color>
+</resources>
