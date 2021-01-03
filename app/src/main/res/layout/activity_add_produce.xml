@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="addProduceViewModel"
+            type="com.gilboot.agriculturemarket.addproduce.AddProduceViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/size_8">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/size_16"
+                android:text="@string/add_produce"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/size_normal" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                style="@style/cardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/size_24"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="H,86:54">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@{addProduceViewModel.pictureUriLiveData}"
+                    app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+                    tools:src="@drawable/img1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/picture_caps" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--            Name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/size_24"
+                android:background="@drawable/edit_background_selector"
+                android:cursorVisible="true"
+                android:drawablePadding="5dp"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="@color/primaryTextColor"
+                android:textCursorDrawable="@null" />
+
+
+            <!--            Price-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unit_price"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/text_size_20" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/size_24"
+                android:background="@drawable/edit_background_selector"
+                android:cursorVisible="true"
+                android:drawablePadding="5dp"
+                android:hint="@string/unit_price"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textColor="@color/primaryTextColor"
+                android:textCursorDrawable="@null" />
+
+
+            <!--            Price-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unit"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/text_size_20" />
+
+            <EditText
+                android:id="@+id/unit"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/size_24"
+                android:background="@drawable/edit_background_selector"
+                android:cursorVisible="true"
+                android:drawablePadding="5dp"
+                android:hint="@string/unit_hint"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="@color/primaryTextColor"
+                android:textCursorDrawable="@null" />
+
+            <!--            Date of Availability -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_availability"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/text_size_20" />
+
+            <EditText
+                android:id="@+id/date_of_availability"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/size_24"
+                android:background="@drawable/edit_background_selector"
+                android:cursorVisible="true"
+                android:drawablePadding="5dp"
+                android:inputType="date"
+                android:padding="8dp"
+                android:textColor="@color/primaryTextColor"
+                android:textCursorDrawable="@null"
+                app:setCurrentDate="@{ true }" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_24"
+                android:background="@drawable/button_filled"
+                android:enabled="@{!addProduceViewModel.isAddingLiveData}"
+                android:text='@{addProduceViewModel.isAddingLiveData ? "ADDING" : "ADD PRODUCE" }'
+                tools:text="@string/add_produce" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

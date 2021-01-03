@@ -32,6 +32,15 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".addproduce.AddProduceActivity"
+            android:label="@string/add_produce">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
 
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

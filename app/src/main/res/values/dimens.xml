@@ -45,4 +45,6 @@
     <dimen name="size_24">24dp</dimen>
     <dimen name="size_72">72dp</dimen>
     <dimen name="size_8">8dp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="size_48">48dp</dimen>
 </resources>

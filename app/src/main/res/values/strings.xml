@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Agriculture Market</string>
+    <string name="add_produce">Add Produce</string>
+    <string name="name">Name</string>
+    <string name="picture_caps">PICTURE</string>
+    <string name="price">Price</string>
+    <string name="unit">Unit (Kg, Pieces, etc)</string>
+    <string name="unit_hint">Unit eg. Kg</string>
+    <string name="date_of_availability">Date of Availability</string>
+
+
+    <string name="quantity">%1d per %2s</string>
+    <string name="unit_price">Unit Price</string>
+    <string name="book">BOOK</string>
 </resources>

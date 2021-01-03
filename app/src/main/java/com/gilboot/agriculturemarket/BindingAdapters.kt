@@ -1,11 +1,13 @@
 package com.gilboot.agriculturemarket
 
+import android.widget.EditText
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.gilboot.agriculturemarket.models.Produce
 import com.gilboot.agriculturemarket.produce.ProduceListAdapter
+import java.util.*
 
 @BindingAdapter("addDivider")
 fun RecyclerView.addDivider(shouldAdd: Boolean?) =
@@ -34,4 +36,10 @@ fun RecyclerView.bindProduces(produces: List<Produce>?) {
     produces?.let {
         (adapter as ProduceListAdapter).submitList(produces)
     }
+}
+
+
+@BindingAdapter("setCurrentDate")
+fun EditText.bindCurrentDate(should: Boolean) {
+    setText(Date().toLocaleString())
 }

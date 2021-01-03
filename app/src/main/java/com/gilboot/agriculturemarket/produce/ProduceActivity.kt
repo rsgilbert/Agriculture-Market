@@ -33,6 +33,7 @@ class ProduceActivity : AppCompatActivity() {
                 this,
                 R.layout.activity_produce
             )
+
         // set fragments that will be treated as home fragments
         // fragments that are not part of the appBarConfiguration will have a back icon
         appBarConfiguration = AppBarConfiguration(setOf(R.id.produceListFragment))
@@ -69,3 +70,4 @@ fun ProduceActivity.observeSnackMessage() {
 fun ProduceActivity.setObservers() {
     observeSnackMessage()
 }
+

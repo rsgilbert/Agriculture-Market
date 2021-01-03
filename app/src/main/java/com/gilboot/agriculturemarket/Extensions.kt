@@ -1,6 +1,7 @@
 package com.gilboot.agriculturemarket
 
 import android.app.Activity
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import com.gilboot.agriculturemarket.database.MarketDatabase
 import com.google.android.material.snackbar.Snackbar
@@ -33,3 +34,5 @@ val Activity.repository: Repository
 val Fragment.repository: Repository
     get() = requireActivity().repository
 
+
+fun EditText.isNotValid() = text.isNullOrBlank()

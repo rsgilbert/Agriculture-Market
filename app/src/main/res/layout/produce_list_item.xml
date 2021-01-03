@@ -20,7 +20,7 @@
             android:layout_width="@dimen/size_40"
             android:layout_height="@dimen/size_40"
             android:layout_gravity="center"
-            android:src="@mipmap/ic_launcher"
+            android:src="@{produce.picture}"
             tools:src="@mipmap/ic_launcher" />
 
 
@@ -46,7 +46,7 @@
                 android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{produce.date.toLocaleString()}"
+                android:text="@{produce.date}"
                 android:textColor="@color/secondaryTextColor"
                 tools:text="24th Ddecember" />
         </LinearLayout>
